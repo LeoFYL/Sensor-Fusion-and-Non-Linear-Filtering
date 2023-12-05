@@ -1,39 +1,4 @@
-% % Set parameters
-% a = -1;
-% b = 1;
-% H = 2;
-% sigma_r = 0.5;
-% 
-% % Simulate x and r
-% x = a + (b-a)*rand(1, 1000);
-% r = normrnd(0, sigma_r, [1, 1000]);
-% 
-% % Calculate y for linear function of x
-% y_lin = H * x + r;
-% 
-% % Calculate y for nonlinear function of x
-% y_nonlin = exp(x) + r;
-% 
-% % Plot histograms of y for linear and nonlinear functions of x
-% figure
-% subplot(1,2,1)
-% histogram(y_lin, 'Normalization', 'pdf')
-% hold on
-% mu_y_lin = H * (a+b)/2;
-% var_y_lin = H^2 * (b-a)^2 / 12 + sigma_r^2;
-% x_vals_lin = linspace(mu_y_lin - 4*sqrt(var_y_lin), mu_y_lin + 4*sqrt(var_y_lin), 100);
-% y_vals_lin = normpdf(x_vals_lin, mu_y_lin, sqrt(var_y_lin));
-% plot(x_vals_lin, y_vals_lin)
-% title('Linear function of x')
-% subplot(1,2,2)
-% histogram(y_nonlin, 'Normalization', 'pdf')
-% hold on
-% mu_y_nonlin = exp((a+b)/2);
-% var_y_nonlin = exp(2*(b-a) + (a+b)/2)^2/12 - exp((b-a) + (a+b)/2)^2/12 + sigma_r^2;
-% x_vals_nonlin = linspace(mu_y_nonlin - 4*sqrt(var_y_nonlin), mu_y_nonlin + 4*sqrt(var_y_nonlin), 100);
-% y_vals_nonlin = normpdf(x_vals_nonlin, mu_y_nonlin, sqrt(var_y_nonlin));
-% plot(x_vals_nonlin, y_vals_nonlin)
-% title('Nonlinear function of x')
+
 
 
 % Simulation parameters
