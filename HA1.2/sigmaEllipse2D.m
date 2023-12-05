@@ -1,26 +1,3 @@
-% function sigmaEllipse2D(mu, Sigma, nSigma)
-% %SIGHMAELLIPSE2D plots the 2D sigma ellipse of a Gaussian distribution
-% %   SIGHMAELLIPSE2D(MU, SIGMA, NSIGMA) plots the 2D sigma ellipse of a
-% %   Gaussian distribution specified by its mean MU and covariance SIGMA.
-% %   The ellipse is drawn with a radius of NSIGMA standard deviations.
-% 
-% 
-% % Generate points on unit circle
-% theta = linspace(0, 2*pi, 100)';
-% xy = [cos(theta), sin(theta)];
-% 
-% % Calculate eigenvectors and eigenvalues of Sigma
-% [V, D] = eig(Sigma);
-% 
-% % Calculate points on ellipse
-% xy = nSigma * (V * sqrt(D)) * xy';
-% 
-% % Plot ellipse
-% plot(mu(1) + xy(1,:), mu(2) + xy(2,:), 'LineWidth', 2);
-% 
-% 
-% 
-% end
 
 function [ xy ] = sigmaEllipse2D( mu, Sigma, level, npoints )
     %SIGMAELLIPSE2D generates x,y-points which lie on the ellipse describing
